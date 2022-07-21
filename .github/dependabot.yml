@@ -2,6 +2,6 @@ version: 2
 updates:
   - package-ecosystem: "maven"
     # Files stored in repository root
-    directory: "/"
+    directory: "app/"
     schedule:
       interval: "daily"

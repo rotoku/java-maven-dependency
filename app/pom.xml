@@ -11,6 +11,19 @@
 		<maven.compiler.target>1.8</maven.compiler.target>
 	</properties>
 
+	<profiles>
+		<profile>
+			<id>sonar</id>
+			<activation>
+				<activeByDefault>true</activeByDefault>
+			</activation>
+			<properties>
+				<sonar.project.key>java-maven-dependency</sonar.project.key>
+				<sonar.project.name>Java Maven Dependência</sonar.project.name>
+			</properties>
+		</profile>
+	</profiles>	
+
 	<dependencies>
 		<dependency>
 			<groupId>org.junit.jupiter</groupId>

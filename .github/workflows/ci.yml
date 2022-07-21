@@ -60,6 +60,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       # Triggering SonarQube analysis as results of it are required by Quality Gate check.
+
+      - name: show current folder and list files
+        run: |
+          pwd
+          ls -lrtha --color
+        shell: bash
+
       - name: SonarQube Scan
         uses: sonarsource/sonarqube-scan-action@master
         env:
@@ -93,8 +100,11 @@ jobs:
         working-directory: app
     steps:
       - uses: actions/checkout@v3
-      - name: Run Horusec
-        id: run_horusec
-        uses: fike/horusec-action@v0.1
+
+      - name: Initialize CodeQL
+        uses: github/codeql-action/init@v1
         with:
-          arguments: -p "." --ignore="**/.vscode/**, **/target/**, **/test/**"
+          languages: java
+
+      - name: Perform CodeQL Analysis
+        uses: github/codeql-action/analyze@v1

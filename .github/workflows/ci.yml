@@ -91,4 +91,4 @@ jobs:
         id: run_horusec
         uses: fike/horusec-action@v0.1
         with:
-          arguments: -p="./"
+          arguments: --ignore="**/.vscode/**, **/target/**, **/test/**"

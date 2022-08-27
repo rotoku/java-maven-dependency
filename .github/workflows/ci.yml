@@ -25,6 +25,10 @@ jobs:
       - name: Maven clean and compile
         run: mvn clean compile -Dmaven.test.skip=true
 
+
+      - name: "List"
+        run: ls -lrtha
+
       - uses: actions/upload-artifact@v3
         with:
           name: "java-maven-dependency"

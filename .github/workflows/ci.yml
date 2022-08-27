@@ -28,7 +28,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: "java-maven-dependency"
-          path: target/** # or path/to/artifact
+          path: ${{ github.workspace }}/${{ inputs.working-directory }}/target/**/*
   
   Test:
     name: Test

@@ -111,5 +111,5 @@ jobs:
       working-directory: "app"
       shell: "bash"
       languages: "java"
-      artifact: "java-maven-dependency"
+      artifact: "java-maven-dependency-${{ github.sha }}"
     secrets: inherit   

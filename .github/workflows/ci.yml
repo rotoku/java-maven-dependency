@@ -31,7 +31,7 @@ jobs:
 
       - uses: actions/upload-artifact@v3
         with:
-          name: "java-maven-dependency"
+          name: "java-maven-dependency-${{ github.sha }}"
           path: ${{ github.workspace }}/app/target/
   
   Test:

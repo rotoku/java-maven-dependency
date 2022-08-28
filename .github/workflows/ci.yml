@@ -23,7 +23,7 @@ jobs:
           maven-version: 3.8.2
       
       - name: Maven clean and compile
-        run: mvn clean compile
+        run: mvn clean package
 
 
       - name: "List"
@@ -32,7 +32,7 @@ jobs:
       - uses: actions/upload-artifact@v3
         with:
           name: "java-maven-dependency-${{ github.sha }}"
-          path: ${{ github.workspace }}/app/target/
+          path: ${{ github.workspace }}/app/target/**/*
   
   Test:
     name: Test

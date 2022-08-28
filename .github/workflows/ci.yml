@@ -23,7 +23,7 @@ jobs:
           maven-version: 3.8.2
       
       - name: Maven clean and compile
-        run: mvn clean compile -Dmaven.test.skip=true
+        run: mvn clean compile
 
 
       - name: "List"

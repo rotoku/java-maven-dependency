@@ -115,4 +115,4 @@ jobs:
       shell: "bash"
       languages: "java"
       artifact: "java-maven-dependency-${{ github.sha }}"
-    secrets: inherit   
+    secrets: inherit

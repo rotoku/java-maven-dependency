@@ -101,6 +101,9 @@ jobs:
         run: mvn -B verify org.sonarsource.scanner.maven:sonar-maven-plugin:sonar
 
   Security:
+    permissions:
+      security-events: write
+      actions: read
     needs:
       - Build
       - Test    

@@ -27,7 +27,7 @@ jobs:
 
 
       - name: "List"
-        run: ls -lrtha
+        run: ls -lrtha ./target
 
       - uses: actions/upload-artifact@v3
         with:
